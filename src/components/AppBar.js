@@ -44,7 +44,7 @@ function CustomAppBar() {
   };
 
   const handleLogout = () => {
-    client.post("/estoque/logout", { withCredentials: true })
+    client.post("/estoque/logout", { withCredentials: false })
       .then(function(res) {
         setCurrentUser(false);
         navigate('/');

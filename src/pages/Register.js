@@ -91,7 +91,7 @@ export default function AuthPage() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            {isLogin ? 'Sign in' : 'Sign up'}
+            {isLogin ? 'Login' : 'Cadastro'}
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 3 }}>
             {isLogin ? (
@@ -101,7 +101,7 @@ export default function AuthPage() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Email"
                   name="email"
                   autoComplete="email"
                   autoFocus
@@ -111,7 +111,7 @@ export default function AuthPage() {
                   required
                   fullWidth
                   name="password"
-                  label="Password"
+                  label="Senha"
                   type="password"
                   id="password"
                   autoComplete="current-password"
@@ -127,7 +127,7 @@ export default function AuthPage() {
                       required
                       fullWidth
                       id="first_name"
-                      label="First Name"
+                      label="Nome"
                       autoFocus
                     />
                   </Grid>
@@ -136,7 +136,7 @@ export default function AuthPage() {
                       required
                       fullWidth
                       id="last_name"
-                      label="Last Name"
+                      label="Sobrenome"
                       name="last_name"
                       autoComplete="family-name"
                       sx={{ mb: 2 }}
@@ -148,7 +148,7 @@ export default function AuthPage() {
                   required
                   fullWidth
                   id="email"
-                  label="Email Address"
+                  label="Email"
                   name="email"
                   autoComplete="email"
                   sx={{ mb: 2 }} 
@@ -157,7 +157,7 @@ export default function AuthPage() {
                   required
                   fullWidth
                   name="password"
-                  label="Password"
+                  label="Senha"
                   type="password"
                   id="password"
                   autoComplete="new-password"
@@ -167,7 +167,7 @@ export default function AuthPage() {
             )}
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
+              label="Lembre-se de mim"
             />
             <Button
               type="submit"
@@ -175,7 +175,7 @@ export default function AuthPage() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              {isLogin ? 'Sign In' : 'Sign Up'}
+              {isLogin ? 'Entrar' : 'Inscrever-se'}
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
@@ -185,8 +185,8 @@ export default function AuthPage() {
                   onClick={() => setIsLogin(!isLogin)}
                 >
                   {isLogin
-                    ? "Don't have an account? Sign Up"
-                    : 'Already have an account? Sign in'}
+                    ? "Não tem uma conta? Inscrever-se"
+                    : 'já tem uma conta? Entrar'}
                 </Link>
               </Grid>
             </Grid>
